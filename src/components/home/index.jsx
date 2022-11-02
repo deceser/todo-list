@@ -43,7 +43,7 @@ const Home = () => {
         <TodoList todos={todos} removeItem={removeItem} />
       ) : loading ? null : (
         <Typography color="error" variant="h4" sx={{ ml: 23, mt: 1 }}>
-          No Todos!
+          No Todo-List!
         </Typography>
       )}
     </Container>
