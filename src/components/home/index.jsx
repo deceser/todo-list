@@ -5,6 +5,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 import NewTodo from "./newtodo";
 import TodoList from "./todolist";
+import { Typography } from "@mui/material";
 
 const Home = () => {
   const [todos, setTodos] = React.useState([]);
@@ -41,7 +42,9 @@ const Home = () => {
       {todos.length ? (
         <TodoList todos={todos} removeItem={removeItem} />
       ) : loading ? null : (
-        <h1>No Todos!</h1>
+        <Typography color="error" variant="h4" sx={{ ml: 23, mt: 1 }}>
+          No Todos!
+        </Typography>
       )}
     </Container>
   );
