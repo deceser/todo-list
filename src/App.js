@@ -11,8 +11,16 @@ import Home from "./components/home";
 function App() {
   const [light, setLight] = React.useState(true);
 
+  React.useEffect(() => {
+    const themeType = localStorage.getItem("themeDark");
+    if (themeType != "themeDark") {
+      setLight(false);
+    }
+  }, []);
+
   const clickTheme = () => {
-    setLight((prev) => !prev);
+    localStorage.setItem("themeDark", light ? "themeLight" : "themeDark");
+    setLight(!light);
   };
 
   return (
