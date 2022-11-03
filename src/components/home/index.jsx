@@ -3,9 +3,10 @@ import React, { useEffect } from "react";
 import Container from "@mui/material/Container";
 import CircularProgress from "@mui/material/CircularProgress";
 
+import Skeleton from "../Skeleton";
 import NewTodo from "./newtodo";
+import NoTodos from "./notodos";
 import TodoList from "./todolist";
-import { Typography } from "@mui/material";
 
 const Home = () => {
   const [todos, setTodos] = React.useState([]);
@@ -37,14 +38,12 @@ const Home = () => {
   };
   return (
     <Container maxWidth="sm">
-      <NewTodo onCreate={addTodo} />
-      {loading && <CircularProgress />}
+      {loading ? <Skeleton /> : <NewTodo onCreate={addTodo} />}
+      {/* {loading && <Skeleton />} */}
       {todos.length ? (
         <TodoList todos={todos} removeItem={removeItem} />
       ) : loading ? null : (
-        <Typography color="error" variant="h4" sx={{ ml: 23, mt: 1 }}>
-          No Todo-List!
-        </Typography>
+        <NoTodos />
       )}
     </Container>
   );
