@@ -66,11 +66,12 @@ export const themeDark = createTheme({
       paper: "rgb(52, 57, 63)",
     },
     text: {
-      primary: "#fff",
+      primary: "#CFCFCF",
+      secondary: "#CFCFCF",
     },
     action: {
-      active: "#fff",
-      hover: "#fff",
+      active: "#CFCFCF",
+      hover: "#CFCFCF",
     },
   },
 

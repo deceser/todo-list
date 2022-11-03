@@ -7,7 +7,6 @@ import Container from "@mui/material/Container";
 
 import Header from "./components/header";
 import Home from "./components/home";
-import "./index.css";
 
 function App() {
   const [light, setLight] = React.useState(true);
