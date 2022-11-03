@@ -15,7 +15,7 @@ export const themeLight = createTheme({
       contrastText: "#0f61a0",
     },
     background: {
-      paper: "rgb(186,186,202);",
+      paper: "#cfcfe0;",
     },
     action: {},
   },
@@ -64,7 +64,7 @@ export const themeDark = createTheme({
       contrastText: "#fff",
     },
     background: {
-      paper: "rgb(52, 57, 63)",
+      paper: "#34393f",
     },
     text: {
       primary: "#CFCFCF",
