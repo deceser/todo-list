@@ -6,9 +6,9 @@ import IconButton from "@mui/material/IconButton";
 import ModeNightTwoToneIcon from "@mui/icons-material/ModeNightTwoTone";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import Typography from "@mui/material/Typography";
-import { AppBar } from "@mui/material";
+import { AppBar, Paper } from "@mui/material";
 
-const Header = () => {
+const Header = ({ clickTheme }) => {
   return (
     <AppBar elevation={0}>
       <Toolbar>
@@ -18,7 +18,7 @@ const Header = () => {
           </Typography>
         </Box>
         <Box>
-          <IconButton variant="dashed">
+          <IconButton onClick={clickTheme} variant="dashed">
             <Brightness3Icon />
           </IconButton>
         </Box>

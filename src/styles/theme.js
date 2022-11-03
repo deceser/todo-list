@@ -1,8 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
-export const theme = createTheme({
+export const themeLight = createTheme({
   palette: {
-    mode: "light",
     primary: {
       main: "#babaca",
     },
@@ -16,7 +15,7 @@ export const theme = createTheme({
       contrastText: "#0f61a0",
     },
     background: {
-      paper: "#cfcfe0",
+      paper: "rgb(186,186,202);",
     },
   },
 
@@ -37,7 +36,7 @@ export const theme = createTheme({
           style: {
             color: "rgba(0, 0, 0, 0.54)",
             boxShadow: "3px 3px 6px rgb(0 0 0 / 25%)",
-            backgroundColor: "#d9d9e6",
+            backgroundColor: "#d1d1e2",
             marginTop: 3,
             ":active": {
               boxShadow: " inset 3px 3px 6px rgb(0 0 0 / 25%)",
@@ -49,49 +48,50 @@ export const theme = createTheme({
   },
 });
 
-// export const theme = createTheme({
-//   palette: {
-//     mode: "dark",
-//     primary: {
-//       main: "#e3e3e3",
-//     },
-//     secondary: {
-//       main: "#e3e3e3",
-//     },
-//     error: {
-//       main: "#e3e3e3",
-//       light: "#e3e3e3",
-//       dark: "#e3e3e3",
-//       contrastText: "#e3e3e3",
-//     },
-//     background: {
-//       paper: "#34393f",
-//     },
-//   },
+export const themeDark = createTheme({
+  palette: {
+    primary: {
+      main: "rgb(52, 57, 63)",
+    },
+    secondary: {
+      main: "#e3e3e3",
+    },
+    error: {
+      main: "#e3e3e3",
+      light: "#e3e3e3",
+      dark: "#e3e3e3",
+      contrastText: "#e3e3e3",
+    },
+    background: {
+      paper: "rgb(52, 57, 63)",
+    },
+  },
 
-//   typography: {
-//     fontFamily: "Quicksand",
-//     fontWeightLight: 400,
-//     fontWeightRegular: 500,
-//     fontWeightMedium: 600,
-//     fontWeightBold: 700,
-//     fontSize: 15,
-//   },
+  typography: {
+    fontFamily: "Quicksand",
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
+    fontSize: 15,
+  },
 
-//   components: {
-//     MuiIconButton: {
-//       variants: [
-//         {
-//           props: { variant: "dashed" },
-//           style: {
-//             backgroundColor: "#3e4349",
-//             marginTop: 3,
-//             ":active": {
-//               boxShadow: " inset -3px -3px 6px rgb(255 255 255 / 6%)",
-//             },
-//           },
-//         },
-//       ],
-//     },
-//   },
-// });
+  components: {
+    MuiIconButton: {
+      variants: [
+        {
+          props: { variant: "dashed" },
+          style: {
+            backgroundColor: "#3e4349",
+            color: "#fff",
+            boxShadow: "3px 3px 6px rgb(0 0 0 / 25%)",
+            marginTop: 3,
+            ":active": {
+              boxShadow: " inset 3px 3px 6px rgb(0 0 0 / 25%)",
+            },
+          },
+        },
+      ],
+    },
+  },
+});
