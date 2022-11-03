@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import FlareTwoToneIcon from "@mui/icons-material/FlareTwoTone";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import Typography from "@mui/material/Typography";
-import { AppBar } from "@mui/material";
+import AppBar from "@mui/material/AppBar";
 
 const Header = ({ clickTheme, light }) => {
   return (
