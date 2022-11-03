@@ -26,7 +26,7 @@ function App() {
         }}
       />
       <Container maxWidth="xl">
-        <Header clickTheme={clickTheme} />
+        <Header light={light} clickTheme={clickTheme} />
         <Home />
       </Container>
     </ThemeProvider>

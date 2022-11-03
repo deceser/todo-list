@@ -54,16 +54,23 @@ export const themeDark = createTheme({
       main: "rgb(52, 57, 63)",
     },
     secondary: {
-      main: "#e3e3e3",
+      main: "#fff",
     },
     error: {
-      main: "#e3e3e3",
-      light: "#e3e3e3",
-      dark: "#e3e3e3",
-      contrastText: "#e3e3e3",
+      main: "#fff",
+      light: "#fff",
+      dark: "#fff",
+      contrastText: "#fff",
     },
     background: {
       paper: "rgb(52, 57, 63)",
+    },
+    text: {
+      primary: "#fff",
+    },
+    action: {
+      active: "#fff",
+      hover: "#fff",
     },
   },
 
