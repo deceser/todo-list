@@ -11,6 +11,34 @@ const Home = () => {
   const [loading, setLoading] = React.useState(true);
   const [todos, setTodos] = React.useState(JSON.parse(localStorage.getItem("todos")) || []);
 
+  // ---------------------------------------------------------------------------------------------
+
+  // add
+
+  const addTodo = (title) => {
+    setTodos(
+      todos.concat([
+        {
+          title,
+          id: Date.now(),
+          completed: false,
+        },
+      ])
+    );
+  };
+
+  // ---------------------------------------------------------------------------------------------
+
+  // remove
+
+  const removeItem = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
+  // ---------------------------------------------------------------------------------------------
+
+  // save
+
   React.useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
@@ -28,24 +56,8 @@ const Home = () => {
 
   // ---------------------------------------------------------------------------------------------
 
-  const removeItem = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
-  };
-
-  const addTodo = (title) => {
-    setTodos(
-      todos.concat([
-        {
-          title,
-          id: Date.now(),
-          completed: false,
-        },
-      ])
-    );
-  };
-
   return (
-    <Container maxWidth="sm">
+    <div>
       {loading ? (
         <Skeleton />
       ) : (
@@ -54,7 +66,7 @@ const Home = () => {
           {todos.length ? <TodoList todos={todos} removeItem={removeItem} /> : loading ? null : <NoTodos />}
         </>
       )}
-    </Container>
+    </div>
   );
 };
 

@@ -13,6 +13,7 @@ const styles = {
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "center",
+    width: "100%",
   },
 };
 
@@ -28,12 +29,12 @@ const NewTodo = ({ onCreate }) => {
 
   return (
     <Box sx={{ mt: 20 }}>
-      <Paper elevation={8} style={styles.Paper}>
-        <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler}>
+        <Paper elevation={8} style={styles.Paper}>
           <TextField
             value={addTodo}
             onChange={(event) => setAddTodo(event.target.value)}
-            sx={{ width: "480px" }}
+            sx={{ width: "100%" }}
             id="standard-basic"
             label="New Todo"
             variant="standard"
@@ -42,8 +43,8 @@ const NewTodo = ({ onCreate }) => {
           <IconButton disabled={!addTodo} type="submit" variant="dashed">
             <AddTwoToneIcon />
           </IconButton>
-        </form>
-      </Paper>
+        </Paper>
+      </form>
     </Box>
   );
 };

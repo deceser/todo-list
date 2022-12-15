@@ -11,6 +11,13 @@ import Home from "./components/home";
 function App() {
   const [light, setLight] = React.useState(true);
 
+  const clickTheme = () => {
+    localStorage.setItem("themeDark", light ? "themeLight" : "themeDark");
+    setLight(!light);
+  };
+
+  //-----------------------------------------------------------------------------------
+
   React.useEffect(() => {
     const themeType = localStorage.getItem("themeDark");
     if (themeType != "themeDark") {
@@ -18,11 +25,9 @@ function App() {
     }
   }, []);
 
-  const clickTheme = () => {
-    localStorage.setItem("themeDark", light ? "themeLight" : "themeDark");
-    setLight(!light);
-  };
+  //-----------------------------------------------------------------------------------
 
+  
   return (
     <ThemeProvider theme={light ? themeLight : themeDark}>
       <GlobalStyles
@@ -32,9 +37,9 @@ function App() {
           },
         }}
       />
-      <Container maxWidth="xl">
-        <Header light={light} clickTheme={clickTheme} />
-        <Home />
+      <Header light={light} clickTheme={clickTheme} />
+      <Container>
+          <Home />
       </Container>
     </ThemeProvider>
   );

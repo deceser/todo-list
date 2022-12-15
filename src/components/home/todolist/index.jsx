@@ -8,11 +8,12 @@ import DeleteTwoToneIcon from "@mui/icons-material/DeleteTwoTone";
 
 const styles = {
   Paper: {
-    padding: "11px",
+    padding: "8px",
     borderRadius: "10px",
     display: "flex",
     alignItems: "center",
     backGroundColor: "#cfcfe0",
+    width: "100%",
   },
   Typography: {
     marginLeft: "10px",
