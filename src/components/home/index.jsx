@@ -15,6 +15,19 @@ const Home = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
+  // ---------------------------------------------------------------------------------------------
+
+  // check skeleton
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setTodos(todos);
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  // ---------------------------------------------------------------------------------------------
+
   const removeItem = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
@@ -33,8 +46,14 @@ const Home = () => {
 
   return (
     <Container maxWidth="sm">
-      <NewTodo onCreate={addTodo} />
-      {todos.length ? <TodoList todos={todos} removeItem={removeItem} /> : loading ? <NoTodos /> : null}
+      {loading ? (
+        <Skeleton />
+      ) : (
+        <>
+          <NewTodo onCreate={addTodo} />
+          {todos.length ? <TodoList todos={todos} removeItem={removeItem} /> : loading ? null : <NoTodos />}
+        </>
+      )}
     </Container>
   );
 };
