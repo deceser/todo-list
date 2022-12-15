@@ -25,7 +25,7 @@ const TodoList = ({ todos, removeItem }) => {
     <>
       {todos.map((todo) => (
         <Box sx={{ mt: 2 }} key={todo.id}>
-          <Paper elevation={8} style={styles.Paper}>
+          <Paper elevation={8} style={styles.Paper} className="animate__animated animate__fadeInUp">
             <Typography style={styles.Typography}>{todo.title}</Typography>
             <IconButton onClick={() => removeItem(todo.id)} variant="dashed">
               <DeleteTwoToneIcon />

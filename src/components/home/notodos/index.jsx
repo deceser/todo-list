@@ -18,7 +18,7 @@ const styles = {
 const NoTodos = () => {
   return (
     <Box sx={{ mt: 2 }}>
-      <Paper elevation={6} style={styles.Paper}>
+      <Paper elevation={6} style={styles.Paper} className="animate__animated animate__pulse animate__slow animate__infinite">
         <Typography variant="h8" sx={{ ml: 28 }}>
           No Todos!
         </Typography>
